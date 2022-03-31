@@ -1,3 +1,2 @@
-  vars:
-    log_path: "/home/centos/ansible/jay_test/logs/"
-    success_60e_dict: {}
+log_path: "/home/centos/ansible/jay_test/logs/"
+success_60e_dict: {}

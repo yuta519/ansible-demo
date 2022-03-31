@@ -2,17 +2,17 @@
   gather_facts: false
   tasks:
     - name: Include common variables
-      include_vars: vars/common.yml
-      register: common
+      include_vars: common.yml
+    - debug:
+        msg: "{{ log_path }}"
 
     - name: ping
       ping:
       register: result
 
-    - name: debug
+    - name: debug result
       debug:
         msg: "{{ result }}"
-        # msg: "{{ common }}"
 
     - include_role:
         name: servers
