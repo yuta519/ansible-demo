@@ -1,0 +1,8 @@
+version: '3'
+services:
+   ubuntu:
+     image: ubuntu
+     container_name: ubuntu01
+     ports:
+      - "1022:22"
+     tty: true

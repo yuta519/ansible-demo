@@ -1,0 +1,20 @@
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Include common variables
+      include_vars: vars/common.yml
+      register: common
+
+    - name: ping
+      ping:
+      register: result
+
+    - name: debug
+      debug:
+        msg: "{{ result }}"
+        # msg: "{{ common }}"
+
+    - include_role:
+        name: servers
+      vars:
+        install_httpd: true
